@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Megan Johnston</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <!-- My image -->
+      <nav>
+        <div class="bgimg"></div>
+      </nav>
+
+      <!-- Navigation -->
+      <nav id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="closeNav()">×</button>
+        <div class="menu">
+          <a href="#" onclick="closeNav()">Home</a>
+          <a href="#portfolio" onclick="closeNav()">Portfolio</a>
+          <a href="#about" onclick="closeNav()">About</a>
+          <a href="#contact" onclick="closeNav()">Contact</a>
+        </div>
+      </nav>
+      <button class="open-btn" onclick="openNav()">☰</button>
+
+      <!-- Content -->
+      <div class="content" style="margin-left: 40%">
+        <!-- Welcome/Common info -->
+        <header id="home">
+          <h1><b>Megan Johnston</b></h1>
+          <p>Web Design and Developer</p>
+        </header>
+
+        <!-- Portfolio/Projects -->
+        <div id="portfolio">
+          <h2>My Projects</h2>
+          <!-- Image links to sites -->
+          <div class="imageGrid">
+            <div>
+              <div class="imageContainer">
+                <a href="https://megantia.github.io/resume/" target="_blank"
+                  ><img
+                    src="./images/BasicResume.png"
+                    alt="Basic Resume Website"
+                /></a>
+                <div class="description">
+                  Basic Resume Website without much styling
+                </div>
+              </div>
+              <div class="imageContainer">
+                <a href="https://megantia.github.io/S1Y1-WD12/" target="_blank"
+                  ><img
+                    src="./images/SleepWebsite_Y1S1.png"
+                    alt="Assignment Website about Sleep"
+                /></a>
+                <div class="description">Year 1 Semester 1 Assignment Website about Sleep</div>
+              </div>
+              <div class="imageContainer">
+                <a
+                  href="https://megantia.github.io/S2Y1-WS12BPersonalPortfolio/"
+                  target="_blank"
+                  ><img
+                    src="./images/PersonnalPortfolio_Y1S2.png"
+                    alt="Assignment Website Personal Portfolio"
+                /></a>
+                <div class="description">Year 1 Semester 2 Assignment Website Personal Website featuring my Art</div>
+              </div>
+            </div>
+            <div>
+              <div class="imageContainer">
+                <a href="https://megantia.github.io/S2Y2-WA22/" target="_blank"
+                  ><img
+                    src="./images/SpaceShipGame_Y2S2.png"
+                    alt="Assignment SpaceShip Game"
+                /></a>
+                <div class="description">Year 2 Semester 2 Assignment Website Space Ship Game</div>
+              </div>
+              <div class="imageContainer">
+                <a
+                  href="https://megantia.github.io/S2Y2-MindMateAI/"
+                  target="_blank"
+                  ><img
+                    src="./images/MindMateAI_Y2S2.png"
+                    alt="Assignment Website MindMateAI"
+                /></a>
+                <div class="description">Year 2 Semester 2 Assignment Website MindMateAI</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About me -->
+        <div id="about" class="about">
+          <h2>About Me</h2>
+          <p>
+            My name is Megan Johnston and this is a little introduction about
+            me. I was born and raised in Gauteng, attending school at Laerskool
+            Rooihuiskraal, Hoërskool Swartkop and Impaq Online. I switched from
+            a government school to an online school after an accident occurred,
+            but it allowed me to focus more on my work without the constant
+            external stimulation. I am someone who is more than eager to learn
+            new things, but I do have to be wary so that I do not fall into a
+            rabbit hole that will suck me in for months.
+          </p>
+          <br />
+          <p>
+            I am currently in my second year at Stadio for a Bachelors Degree in
+            Web Design and Development, and am thoroughly enjoying it. I have
+            experience in working for long hours, stepping up to the role of a
+            leader through my Class Representative position, organization of
+            physical and digital documents, as well as using my creative brain
+            to make beautiful things. Me and my team won the Hackathon hosted by
+            Stadio and Otinga in 2025, showcasing my ability to work under a
+            tight time crunch, albeit with the side effect of being out of
+            commission for the next day or two.
+          </p>
+
+          <h3>My Skills</h3>
+          <section class="skills">
+            <p>HTML</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 99%">99%</div>
+            </div>
+            <p>CSS</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 99%">99%</div>
+            </div>
+            <p>Bootstrap</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 70%">70%</div>
+            </div>
+            <p>Java</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 65%">65%</div>
+            </div>
+            <p>JavaScript</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 70%">70%</div>
+            </div>
+            <p>C#</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 15%">15%</div>
+            </div>
+            <p>PHP</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 75%">75%</div>
+            </div>
+            <p>MySQL</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 80%">80%</div>
+            </div>
+            <p>Web Animation Scripting</p>
+            <div class="bar">
+              <div class="progress" style="--percent: 20%">20%</div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="testimonials">
+          <h3>Testimonials</h3>
+          <!-- image -->
+          <p>No Testimonials</p>
+        </div>
+
+        <!-- Contact me -->
+        <div id="contact" class="contact">
+          <h2>Contact Me</h2>
+          <hr />
+          <div class="details">
+            <div class="detailItem">
+              <img src="./images/location.png" alt="Location Icon" />
+              <p>Centurion, Gauteng</p>
+            </div>
+            <div class="detailItem">
+              <img src="./images/phone.png" alt="Phone Icon" />
+              <p>Phone: 081 573 5873</p>
+            </div>
+            <div class="detailItem">
+              <img src="./images/email.png" alt="Email Icon" />
+              <p>Email: meganjohnston100@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <footer>
+          <div class="footerLinks">
+            <a
+              href="https://www.linkedin.com/in/megan-johnston-7a243a299?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"
+              ><img src="./images/LinkeInLogo.png" alt="LinkedIn Logo"
+            /></a>
+            <a href="https://www.instagram.com/meg.anj05/" target="_blank"
+              ><img src="./images/instagramLogo.png" alt="Instagram Logo"
+            /></a>
+          </div>
+          <p>Designed and Developed by Megan Johnston</p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
