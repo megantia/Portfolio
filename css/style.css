@@ -116,6 +116,9 @@ header h1 {
 header p {
   font-size: 20px;
 }
+.clickLink{
+  display: none;
+}
 /* Project Grid Styling */
 .imageGrid {
   display: flex;
@@ -264,8 +267,8 @@ Responsive design
   .bgimg {
     position: relative;
     width: 100%;
-    height: 450px;
-    background-size: contain;
+    height: 600px;
+    background-size: cover;
   }
   .content {
     margin-left: 0 !important;
@@ -275,7 +278,11 @@ Responsive design
     width: 100%;
     right: -100%;
   }
-
+.clickLink{
+  display: block;
+  text-align: center;
+  padding-bottom: 10px;
+}
   h2,
   h3,
   .about p,
@@ -303,6 +310,9 @@ Responsive design
 
   .open-btn {
     color: #333;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
   }
 
   header {
