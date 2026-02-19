@@ -116,9 +116,19 @@ header h1 {
 header p {
   font-size: 20px;
 }
-.clickLink{
+.clickLink {
   display: none;
 }
+
+/* About Section Styling */
+.about {
+  padding-bottom: 2rem;
+}
+.about p {
+  padding: 0rem 3rem;
+  text-align: justify;
+}
+
 /* Project Grid Styling */
 .imageGrid {
   display: flex;
@@ -141,11 +151,15 @@ header p {
 }
 .imageContainer {
   position: relative;
-  overflow: hidden;
+}
+.imageContainer a {
+  position: relative;
+  z-index: 1;
 }
 .imageContainer img {
   width: calc(100% - 20px);
   display: block;
+  opacity: 0.5;
   border: gray solid 1px;
   border-radius: 4px;
   padding: 5px;
@@ -153,6 +167,11 @@ header p {
 }
 .imageContainer:hover img {
   transform: scale(1.05);
+  opacity: 1;
+}
+.image-wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 .description {
   position: absolute;
@@ -166,21 +185,24 @@ header p {
   opacity: 0;
   transition: opacity 0.3s ease;
   font-size: 0.9rem;
+  z-index: 5;
 }
 .imageContainer:hover .description {
   opacity: 1;
 }
-
-/* About Section Styling */
-.about {
-  padding-bottom: 2rem;
-}
-.about p {
-  padding: 0rem 3rem;
-  text-align: justify;
-}
-.about h3 {
-  padding-top: 2rem;
+.ribbon {
+  max-width: 80px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  right: -15px;
+  top: -12px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(25deg);
+  background-color: #9d0208;
+  color: white;
+  z-index: 10;
 }
 /* Skills Styling */
 .skills {
@@ -192,13 +214,13 @@ header p {
   font-weight: bold;
 }
 .bar {
-  background: lightgray;
+  background: darkgray;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 16px;
 }
 .progress {
-  background: gray;
+  background: #9d0208;
   color: white;
   text-align: center;
   padding: 4px 0;
@@ -230,6 +252,13 @@ hr {
   align-items: center;
   gap: 0.6rem;
 }
+.detailItem a{
+  color: #9d0208;
+}
+.detailItem a:hover{
+  color: #9d0208;
+  font-weight: bold;
+}
 .detailItem img {
   padding: 0rem 3rem;
   width: 24px;
@@ -241,12 +270,17 @@ hr {
 }
 /* Footer Styling */
 footer {
-  background-color: lightgray;
+  background-color: #9d0208;
+  color: white;
   padding: 3rem;
   text-align: center;
 }
 .footerLinks {
   padding-bottom: 1rem;
+}
+.footerLinks img{
+  width: 30px;
+  width: 30px;
 }
 .footerLinks a {
   display: inline-block;
@@ -278,11 +312,11 @@ Responsive design
     width: 100%;
     right: -100%;
   }
-.clickLink{
-  display: block;
-  text-align: center;
-  padding-bottom: 10px;
-}
+  .clickLink {
+    display: block;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
   h2,
   h3,
   .about p,
@@ -301,6 +335,12 @@ Responsive design
     flex-direction: column;
     gap: 0;
     padding: 0 1rem;
+  }
+  .imageContainer {
+    padding-bottom: 1.5rem;
+  }
+  .imageContainer img {
+    opacity: 1;
   }
   .imageGrid > div {
     flex: none;
