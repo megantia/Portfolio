@@ -10,59 +10,99 @@
   <body>
     <div class="layout">
       <!-- My image -->
-      <nav>
-        <div class="bgimg"></div>
-      </nav>
+      <div class="bgimg" role="img" aria-label="Photo of Megan Johnston"></div>
 
       <!-- Navigation -->
-      <nav id="sidebar" class="sidebar">
-        <button class="close-btn" onclick="closeNav()">×</button>
+      <nav id="sidebar" class="sidebar" aria-label="Main menu" inert>
+        <button class="close-btn" onclick="closeNav(true)" aria-label="Close menu">
+          ×
+        </button>
         <div class="menu">
           <a href="#" onclick="closeNav()">Home</a>
           <a href="#about" onclick="closeNav()">About</a>
+          <a href="#achievements" onclick="closeNav()">Achievements</a>
           <a href="#portfolio" onclick="closeNav()">Portfolio</a>
           <a href="#contact" onclick="closeNav()">Contact</a>
         </div>
       </nav>
-      <button class="open-btn" onclick="openNav()">☰</button>
+      <button
+        class="open-btn"
+        onclick="openNav()"
+        aria-label="Open menu"
+        aria-controls="sidebar"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
 
       <!-- Content -->
       <div class="content" style="margin-left: 40%">
         <!-- Welcome/Common info -->
         <header id="home">
           <h1><b>Megan Johnston</b></h1>
-          <p>Web Design and Developer</p>
+          <p>Web Designer and Developer</p>
+          <a href="#achievements" class="badge">🏆 2× Hackathon Winner</a>
         </header>
 
+        <main>
         <!-- About me -->
-        <div id="about" class="about">
+        <section id="about" class="about">
           <h2>About Me</h2>
           <p>
-            My name is Megan Johnston and this is a little introduction about
-            me. I was born and raised in Gauteng, attending school at Laerskool
-            Rooihuiskraal, Hoërskool Swartkop and Impaq Online. I switched from
-            a government school to an online school after an accident occurred,
-            but it allowed me to focus more on my work without the constant
-            external stimulation. I am someone who is more than eager to learn
-            new things, but I do have to be wary so that I do not fall into a
-            rabbit hole that will suck me in for months.
+            I am a web design and development student at Stadio, working
+            towards my Bachelor's Degree in Web Design and Development. I build
+            websites and web applications with HTML, CSS, JavaScript, PHP and
+            MySQL, and I love using my creative side to make things that look
+            good, and work well.
           </p>
           <br />
           <p>
-            I am currently pursuing a Bachelors Degree in Web Design and
-            Development at Stadio, and am thoroughly enjoying it. I have
-            experience in working for long hours, stepping up to the role of a
-            leader through my Class Representative position, organization of
-            physical and digital documents, as well as using my creative brain
-            to make beautiful things. Me and my team won the Hackathon hosted by
-            Stadio and Otinga in 2025, showcasing my ability to work under a
-            tight time crunch, albeit with the side effect of being out of
-            commission for the next day or two.
+            I have stepped up as a leader through my Class Representative
+            position, I am used to working long hours, and I keep both physical
+            and digital documents well organised. I am always eager to learn
+            new things, I just have to be careful not to fall into a rabbit
+            hole that will suck me in for months.
           </p>
-        </div>
+          <br />
+          <p>
+            I was born and raised in Gauteng, attending Laerskool Rooihuiskraal
+            and Hoërskool Zwartkop before finishing school through Impaq Online.
+            Switching to an online school after an accident turned out to be a
+            positive change, as it allowed me to focus on my work without the
+            constant external stimulation.
+          </p>
+        </section>
+
+        <!-- Achievements -->
+        <section id="achievements" class="achievements">
+          <h2>Achievements</h2>
+          <div class="achievementGrid">
+            <div class="achievement">
+              <span class="year">2026</span>
+              <h3>Hackathon Winner</h3>
+              <p>
+                Stadio &amp; Otinga Hackathon<br/>
+                Winning project: <b>Annie</b>
+            </p>
+            </div>
+            <div class="achievement">
+              <span class="year">2025</span>
+              <h3>Hackathon Winner</h3>
+              <p>
+                Stadio &amp; Otinga Hackathon<br />
+                Winning project: <b>Kojo the Content Mod</b>
+              </p>
+            </div>
+          </div>
+          <p class="achievementNote">
+            Two years in a row, my team and I have built and pitched a working
+            product under a tight time crunch, albeit with the side effect of
+            being out of commission for the next day or two.
+          </p>
+        </section>
 
         <!-- Portfolio/Projects -->
-        <div id="portfolio">
+        <section id="portfolio">
           <h2>My Projects</h2>
           <!-- Image links to sites -->
           <div class="clickLink">
@@ -74,13 +114,24 @@
                 <div class="image-wrapper">
                   <a href="https://megantia.github.io/resume/" target="_blank"
                     ><img
-                      src="./images/BasicResume.png"
+                      src="./images/BasicResume.jpg"
+                      width="700"
+                      height="331"
+                      loading="lazy"
                       alt="Basic Resume Website"
                   /></a>
                 </div>
                 <span class="ribbon">Non-Responsive</span>
                 <div class="description">
-                  Basic Resume Website without much styling
+                  <h3>Basic Resume</h3>
+                  <p>
+                    My first resume page, built to practise semantic HTML
+                    structure.
+                  </p>
+                  <p class="tech">HTML</p>
+                  <a href="https://github.com/megantia/resume" target="_blank"
+                    >View code ↗</a
+                  >
                 </div>
               </div>
               <div class="imageContainer">
@@ -89,13 +140,26 @@
                     href="https://megantia.github.io/S1Y1-WD12/"
                     target="_blank"
                     ><img
-                      src="./images/SleepWebsite_Y1S1.png"
-                      alt="Assignment Website about Sleep"
+                      src="./images/SleepWebsite_Y1S1.jpg"
+                      width="700"
+                      height="331"
+                      loading="lazy"
+                      alt="Sleep information website"
                   /></a>
                 </div>
                 <span class="ribbon">Non-Responsive</span>
                 <div class="description">
-                  Year 1 Semester 1 Assignment Website about Sleep
+                  <h3>Sleep</h3>
+                  <p>
+                    An informational website about sleep and why it matters for
+                    the body and mind.
+                  </p>
+                  <p class="tech">HTML · CSS</p>
+                  <a
+                    href="https://github.com/megantia/S1Y1-WD12"
+                    target="_blank"
+                    >View code ↗</a
+                  >
                 </div>
               </div>
               <div class="imageContainer">
@@ -104,14 +168,26 @@
                     href="https://megantia.github.io/S2Y1-WS12BPersonalPortfolio/"
                     target="_blank"
                     ><img
-                      src="./images/PersonnalPortfolio_Y1S2.png"
-                      alt="Assignment Website Personal Portfolio"
+                      src="./images/PersonalPortfolio_Y1S2.jpg"
+                      width="700"
+                      height="331"
+                      loading="lazy"
+                      alt="Art portfolio website"
                   /></a>
                 </div>
                 <span class="ribbon">Non-Responsive</span>
                 <div class="description">
-                  Year 1 Semester 2 Assignment Website Personal Website
-                  featuring my Art
+                  <h3>Art Portfolio</h3>
+                  <p>
+                    A personal website showcasing my art, with About, Projects,
+                    Blog and Contact pages.
+                  </p>
+                  <p class="tech">HTML · CSS</p>
+                  <a
+                    href="https://github.com/megantia/S2Y1-WS12BPersonalPortfolio"
+                    target="_blank"
+                    >View code ↗</a
+                  >
                 </div>
               </div>
             </div>
@@ -122,13 +198,26 @@
                     href="https://megantia.github.io/S2Y2-WA22/"
                     target="_blank"
                     ><img
-                      src="./images/SpaceShipGame_Y2S2.png"
-                      alt="Assignment SpaceShip Game"
+                      src="./images/SpaceShipGame_Y2S2.jpg"
+                      width="700"
+                      height="331"
+                      loading="lazy"
+                      alt="SpaceShip browser game"
                   /></a>
                 </div>
                 <span class="ribbon">Partial-Responsive</span>
                 <div class="description">
-                  Year 2 Semester 2 Assignment Website Space Ship Game
+                  <h3>SpaceShip Game</h3>
+                  <p>
+                    A browser game where you steer a spaceship past obstacles,
+                    with physics, collision detection and scoring.
+                  </p>
+                  <p class="tech">HTML Canvas · CSS · JavaScript</p>
+                  <a
+                    href="https://github.com/megantia/S2Y2-WA22"
+                    target="_blank"
+                    >View code ↗</a
+                  >
                 </div>
               </div>
               <div class="imageContainer">
@@ -137,78 +226,123 @@
                     href="https://megantia.github.io/S2Y2-MindMateAI/"
                     target="_blank"
                     ><img
-                      src="./images/MindMateAI_Y2S2.png"
-                      alt="Assignment Website MindMateAI"
+                      src="./images/MindMateAI_Y2S2.jpg"
+                      width="700"
+                      height="331"
+                      loading="lazy"
+                      alt="MindMate AI website"
                   /></a>
                 </div>
                 <div class="description">
-                  Year 2 Semester 2 Assignment Website MindMateAI
+                  <h3>MindMate AI</h3>
+                  <p>
+                    A responsive marketing website for an AI mental wellness
+                    app, with a mobile burger menu.
+                  </p>
+                  <p class="tech">HTML · CSS · JavaScript</p>
+                  <a
+                    href="https://github.com/megantia/S2Y2-MindMateAI"
+                    target="_blank"
+                    >View code ↗</a
+                  >
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Skills -->
-        <h3>My Skills</h3>
-        <section class="skills">
-          <p>HTML</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 99%">99%</div>
-          </div>
-          <p>CSS</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 99%">99%</div>
-          </div>
-          <p>Bootstrap</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 70%">70%</div>
-          </div>
-          <p>Java</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 65%">65%</div>
-          </div>
-          <p>JavaScript</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 70%">70%</div>
-          </div>
-          <p>C#</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 15%">15%</div>
-          </div>
-          <p>PHP</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 75%">75%</div>
-          </div>
-          <p>MySQL</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 80%">80%</div>
-          </div>
-          <p>Web Animation Scripting</p>
-          <div class="bar">
-            <div class="progress" style="--percent: 20%">20%</div>
+          <!-- Code-only projects (need a server or device, so not on GitHub Pages) -->
+          <h3 class="codeHeading">More Projects on GitHub</h3>
+          <p class="codeNote">
+            These projects need a server or device to run, so they link
+            straight to their code.
+          </p>
+          <div class="codeGrid">
+            <a
+              class="codeCard"
+              href="https://github.com/megantia/TextbookStoreApp"
+              target="_blank"
+            >
+              <span class="codeType">Android App</span>
+              <h4>Textbook Store App</h4>
+              <p>
+                A marketplace for students to buy and sell textbooks, with
+                listings, a user profile and a chat screen.
+              </p>
+              <p class="tech">Kotlin · XML Layouts</p>
+              <span class="codeLink">View code ↗</span>
+            </a>
+            <a
+              class="codeCard"
+              href="https://github.com/megantia/S2Y2-WE22C"
+              target="_blank"
+            >
+              <span class="codeType">Web App</span>
+              <h4>SpeedyWheels Car Rentals</h4>
+              <p>
+                A car rental system with user login, vehicle and customer
+                management, rentals and summary stats.
+              </p>
+              <p class="tech">PHP · MySQL · CSS · JavaScript</p>
+              <span class="codeLink">View code ↗</span>
+            </a>
+            <a
+              class="codeCard"
+              href="https://github.com/megantia/Participation-3---WE22B"
+              target="_blank"
+            >
+              <span class="codeType">Web App</span>
+              <h4>ASP.NET MVC Website</h4>
+              <p>
+                A multi-page website built with the Model-View-Controller
+                pattern, with Home, Contact and Privacy pages.
+              </p>
+              <p class="tech">C# · ASP.NET Core · HTML · CSS</p>
+              <span class="codeLink">View code ↗</span>
+            </a>
           </div>
         </section>
 
-        <!-- Testimonials -->
-        <div class="testimonials">
-          <h3>Testimonials</h3>
-          <!-- image -->
-          <p>No Testimonials</p>
+        <!-- Skills -->
+        <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+          <div class="skillGroup">
+            <h3>Comfortable</h3>
+            <div class="tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+              <span>Kotlin</span>
+            </div>
+          </div>
+          <div class="skillGroup">
+            <h3>Familiar</h3>
+            <div class="tags">
+              <span>Web Animation Scripting</span>
+              <span>Bootstrap</span>
+              <span>Java</span>
+              <span>PHP</span>
+              <span>C#</span>
+            </div>
+          </div>
+          <div class="skillGroup">
+            <h3>Currently Learning</h3>
+            <div class="tags">
+              <span>Python</span>
+            </div>
+          </div>
         </div>
+        </section>
 
         <!-- Contact me -->
-        <div id="contact" class="contact">
+        <section id="contact" class="contact">
           <h2>Contact Me</h2>
           <hr />
           <div class="details">
             <div class="detailItem">
               <img src="./images/location.png" alt="Location Icon by Icons8" />
               <p>Centurion, Gauteng</p>
-            </div>
-            <div class="detailItem">
-              <img src="./images/phone.png" alt="Phone Icon by Icons8" />
-              <p>Phone: <a href="tel:+27815735873">081 573 5873</a></p>
             </div>
             <div class="detailItem">
               <img src="./images/email.png" alt="Email Icon by Icons8" />
@@ -219,8 +353,13 @@
                 >
               </p>
             </div>
+            <p class="contactNote">
+              Need my phone number? Send me an email and I will share it with
+              you.
+            </p>
           </div>
-        </div>
+        </section>
+        </main>
 
         <footer>
           <div class="footerLinks">
@@ -230,6 +369,9 @@
               ><img
                 src="./images/LinkedInWhite.png"
                 alt="LinkedIn Logo by Icons8"
+            /></a>
+            <a href="https://github.com/megantia" target="_blank"
+              ><img src="./images/GitHubWhite.svg" alt="GitHub Logo"
             /></a>
             <a href="https://www.instagram.com/meg.anj05/" target="_blank"
               ><img
